@@ -1,5 +1,8 @@
-from django.urls import path
+from django.contrib import admin
+from django.urls import path,include
+
+from mysite.store.views import ProductViewList
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',include('store.urls'))
+    path('',ProductViewList(), name='product_list'),
 ]
